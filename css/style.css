@@ -1538,7 +1538,7 @@ button.close {
 }
 .menu-header .menu > ul > li .sub-menu {
   position: absolute;
-  z-index: 500;
+  z-index: 600;
   background-color: #ffffff;
   box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
   padding: 20px 30px;
@@ -1547,8 +1547,10 @@ button.close {
   opacity: 0;
   visibility: hidden;
   width: 700px;
+  
 }
-@media (min-width: 992px) {
+
+@media (min-width:992px) {
   .header-item {
     width: 130px;
     height: 40px;
@@ -3056,11 +3058,7 @@ textarea.input {
   max-height: 750px;
   margin:20px;
 }
-.product-img {
-  width: 60%;
-  max-width: calc(100% - 600px);
-  padding-right: 30px;
-}
+
 
 .carousel {
   width: 100%;
@@ -3428,7 +3426,7 @@ textarea.input {
   border-radius:40px;
   overflow:hidden;
   transition: all .3s;
-  z-index:99;
+  z-index:30;
  }
 
 
