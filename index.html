@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>AJS Store</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon type" type="image/x-icon" href="img/Favicon.ico" />
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/f4c7923d41.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/3f0900afc2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script nonce="29c8ce91-0b43-4e23-a166-da1d51a9b6c3">
+      (function (w, d) {
+        !(function (a, e, t, r) {
+          a.zarazData = a.zarazData || {};
+          a.zarazData.executed = [];
+          a.zaraz = { deferred: [] };
+          a.zaraz.q = [];
+          a.zaraz._f = function (e) {
+            return function () {
+              var t = Array.prototype.slice.call(arguments);
+              a.zaraz.q.push({ m: e, a: t });
+            };
+          };
+          for (const e of ["track", "set", "ecommerce", "debug"])
+            a.zaraz[e] = a.zaraz._f(e);
+          a.zaraz.init = () => {
+            var t = e.getElementsByTagName(r)[0],
+              z = e.createElement(r),
+              n = e.getElementsByTagName("title")[0];
+            n && (a.zarazData.t = e.getElementsByTagName("title")[0].text);
+            a.zarazData.x = Math.random();
+            a.zarazData.w = a.screen.width;
+            a.zarazData.h = a.screen.height;
+            a.zarazData.j = a.innerHeight;
+            a.zarazData.e = a.innerWidth;
+            a.zarazData.l = a.location.href;
+            a.zarazData.r = e.referrer;
+            a.zarazData.k = a.screen.colorDepth;
+            a.zarazData.n = e.characterSet;
+            a.zarazData.o = new Date().getTimezoneOffset();
+            a.zarazData.q = [];
+            for (; a.zaraz.q.length; ) {
+              const e = a.zaraz.q.shift();
+              a.zarazData.q.push(e);
+            }
+            z.defer = !0;
+            for (const e of [localStorage, sessionStorage])
+              Object.keys(e || {})
+                .filter((a) => a.startsWith("_zaraz_"))
+                .forEach((t) => {
+                  try {
+                    a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t));
+                  } catch {
+                    a.zarazData["z_" + t.slice(7)] = e.getItem(t);
+                  }
+                });
+            z.referrerPolicy = "origin";
+            z.src =
+              "/cdn-cgi/zaraz/s.js?z=" +
+              btoa(encodeURIComponent(JSON.stringify(a.zarazData)));
+            t.parentNode.insertBefore(z, t);
+          };
+          ["complete", "interactive"].includes(e.readyState)
+            ? zaraz.init()
+            : a.addEventListener("DOMContentLoaded", zaraz.init);
+        })(w, d, 0, "script");
+      })(window, document);
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <!-- Header -->
+      <div id="header">
+        <div class="container">
+          <div class="row">
+            <div class="preheader col-md-3">
+              <div class="preheader-logo">
+                <a href="C:\Users\HOPPY\Desktop\FinalWebDev\StoreWebDev-1\index.html" class="logo"> AJS Store </a>
+              </div>
+            </div>
+            <div class="menu-header col-md-6">
+              <div class="menu-container">
+                <div class="v-center">
+                  <!-- menu start here -->
+                  <div class="header-item">
+                    <div class="menu-overlay"></div>
+                    <nav class="menu" style="height: 100%">
+                      <div class="mobile-menu-head">
+                        <div class="go-back">
+                          <i class="fa fa-angle-left"></i>
+                        </div>
+                        <div class="current-menu-title"></div>
+                        <div class="mobile-menu-close">&times;</div>
+                      </div>
+                      <ul class="menu-main">
+                        <li class="menu-item-has-children">
+                          <a
+                            class="menu-tile"
+                            fhref="#"
+                            style="
+                              color: #303234;
+                              font-size: 13px;
+                              width: 120px;
+                              position: relative;
+                              top: 10px;
+                            "
+                            >All Categories <i class="fa fa-angle-down"></i
+                          ></a>
+                          <div class="sub-menu mega-menu mega-menu-column-4">
+                            <div class="list-item">
+                              <h4 class="title">Informatics</h4>
+                              <ul>
+                                <li><a href="#">Mobiles/Tablets</a></li>
+                                <li><a href="#">Computers</a></li>
+                                <li><a href="#">Peripherals</a></li>
+                                <li><a href="#">Audio & Video</a></li>
+                              </ul>
+                              <h4 class="title">Personal care</h4>
+                              <ul>
+                                <li><a href="#">Oral care</a></li>
+                                <li><a href="#">Bath & Body</a></li>
+                                <li><a href="#">Shave</a></li>
+                                <li><a href="#">Hair care</a></li>
+                              </ul>
+                            </div>
+                            <div class="list-item">
+                              <h4 class="title">School & office supplies</h4>
+                              <ul>
+                                <li><a href="#">Notebooks</a></li>
+                                <li><a href="#">Backpacks</a></li>
+                                <li><a href="#">Writting Material</a></li>
+                                <li><a href="#">Handicraft Accesories</a></li>
+                              </ul>
+                              <h4 class="title">Toys and games</h4>
+                              <ul>
+                                <li><a href="#">Videos Games</a></li>
+                                <li><a href="#">Gift cards</a></li>
+                                <li><a href="#">Toys</a></li>
+                                <li><a href="#">Consoles</a></li>
+                              </ul>
+                            </div>
+                            <div class="list-item">
+                              <h4 class="title">Clothing</h4>
+                              <ul>
+                                <li><a href="#">Men's clothing</a></li>
+                                <li><a href="#">Women's clothing</a></li>
+                                <li><a href="#">Jewelry & Accessories</a></li>
+                                <li><a href="#">Shoes</a></li>
+                              </ul>
+                              <h4 class="title">Sports</h4>
+                              <ul>
+                                <li><a href="#">Bikes</a></li>
+                                <li><a href="#">Balls</a></li>
+                                <li><a href="#">Fitness & Exercise</a></li>
+                                <li><a href="#">Racquets</a></li>
+                              </ul>
+                            </div>
+                            <div class="list-item">
+                              <h4 class="title">Irongmongery</h4>
+                              <ul>
+                                <li><a href="#">Garden Accesories</a></li>
+                                <li><a href="#">Hand & Power Tools</a></li>
+                                <li><a href="#">Paint</a></li>
+                                <li><a href="#">Nails & Screws</a></li>
+                              </ul>
+                              <h4 class="title">Baby Products</h4>
+                              <ul>
+                                <li><a href="#">Bedding & Mattresses</a></li>
+                                <li>
+                                  <a href="#">Booster Seats & High Chairs</a>
+                                </li>
+                                <li><a href="#">Feeding</a></li>
+                                <li><a href="#">Baby Safety</a></li>
+                              </ul>
+                            </div>
+                            <div class="list-item">
+                              <h4 class="title">Home appliances</h4>
+                              <ul>
+                                <li><a href="#">Kitchen & Dinning</a></li>
+                                <li><a href="#">Refrigerators</a></li>
+                                <li><a href="#">Cleaning appliances</a></li>
+                                <li><a href="#">Microwaves</a></li>
+                                <li><a href="#">Dishwashers & Driyers</a></li>
+                              </ul>
+                            </div>
+                            <div class="list-item">
+                              <h4 class="title">Furniture</h4>
+                              <ul>
+                                <li><a href="#">Bedroom </a></li>
+                                <li><a href="#">Office </a></li>
+                                <li><a href="#">Living Room </a></li>
+                                <li><a href="#">Kitchen </a></li>
+                                <li><a href="#">Entryway</a></li>
+                              </ul>
+                            </div>
+                            <div class="list-item">
+                              <h4 class="title">Beauty</h4>
+                              <ul>
+                                <li><a href="#">Hair Care</a></li>
+                                <li><a href="#">Skin Care </a></li>
+                                <li><a href="#">Fragance </a></li>
+                                <li><a href="#">Makeup </a></li>
+                                <li><a href="#">Men's grooming</a></li>
+                              </ul>
+                            </div>
+                            <div class="list-item">
+                              <h4 class="title">Pet Accesories</h4>
+                              <ul>
+                                <li><a href="#">Dog </a></li>
+                                <li><a href="#">Cat </a></li>
+                                <li><a href="#">Fish</a></li>
+                                <li><a href="#">Reptile </a></li>
+                                <li><a href="#">Bird</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </nav>
+
+                    <!-- menu end here -->
+                    <!-- mobile menu trigger -->
+                    <div class="mobile-menu-trigger" style="color: white">
+                      <span style="color: white"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-search">
+                <form>
+                  <input class="input" placeholder="Search Product" />
+                  <button class="search-btn">Search</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="menu-right col-md-3 clearfix">
+              <div class="header-ctn">
+                <div class="col-3">
+                  <a href="C:\Users\HOPPY\Desktop\FinalWebDev\StoreWebDevUser\index.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>You Account</span>
+                  </a>
+                </div>
+                <div class="col-3">
+                  <a class="" href="#">
+                    <i class="fa fa-heart-o"></i>
+                    <span>Your Wishlist</span>
+                    <div class="qty">2</div>
+                  </a>
+                </div>
+                <div class="dropdown col-3">
+                  <a
+                    class="dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-expanded="true"
+                  >
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Your Cart</span>
+                    <div class="qty">5</div>
+                  </a>
+                  <div class="cart-dropdown">
+                    <div class="cart-list">
+                      <div class="product-widget">
+                        <div class="product-img">
+                          <img src="img/r4.jpeg" alt="" />
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">
+                            <a href="#">EASYWRING SPINMP MF KIT (Pack of 1) </a>
+                          </h3>
+                          <h4 class="product-price">
+                            <span class="qty">
+                              <select class="input-select">
+                                <option value="1">1x</option>
+                                <option value="2">2x</option>
+                                <option value="3">3x</option>
+                                <option value="4">4x</option>
+                                <option value="5">5x</option>
+                              </select></span
+                            >28,90€
+                          </h4>
+                        </div>
+                        <button class="delete">
+                          <i class="fa fa-close"></i>
+                        </button>
+                      </div>
+                      <div class="product-widget">
+                        <div class="product-img">
+                          <img src="img/r2.jpg" alt="" />
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">
+                            <a href="#"
+                              >Dove Body Wash Peony and Rose Oil Cleanser, 22 oz
+                            </a>
+                          </h3>
+                          <h4 class="product-price">
+                            <span class="qty">
+                              <select class="input-select">
+                                <option value="1">1x</option>
+                                <option value="2">2x</option>
+                                <option value="3">3x</option>
+                                <option value="4">4x</option>
+                                <option value="5">5x</option>
+                              </select> </span
+                            >1,59€
+                          </h4>
+                        </div>
+                        <button class="delete">
+                          <i class="fa fa-close"></i>
+                        </button>
+                      </div>
+                      <div class="product-widget">
+                        <div class="product-img">
+                          <img src="img/r5.webp" alt="" />
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">
+                            <a href="#"
+                              >Bounty Paper Napkins, White and Print, 200 Count
+                            </a>
+                          </h3>
+                          <h4 class="product-price">
+                            <span class="qty">
+                              <select class="input-select">
+                                <option value="1">1x</option>
+                                <option value="2">2x</option>
+                                <option value="3">3x</option>
+                                <option value="4">4x</option>
+                                <option value="5">5x</option>
+                              </select> </span
+                            >2,80€
+                          </h4>
+                        </div>
+                        <button class="delete">
+                          <i class="fa fa-close"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="cart-summary">
+                      <small>5 Item(s) selected</small>
+                      <h5>SUBTOTAL: 36,47€</h5>
+                    </div>
+                    <div class="cart-btns">
+                      <a href="#">View Cart</a>
+                      <a href="#"
+                        >Checkout <i class="fa fa-arrow-circle-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-toggle">
+                  <a href="#">
+                    <i class="fa fa-bars"></i>
+                    <span>Menu</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Main Section-->
+    <div class="main-section">
+      <div class="product-item">
+        <div class="product-title">
+  
+        </div>
+        <div class="product-wrapper row" style="min-height: 510px">
+          <div class="product-img col-md-7">
+            <div
+              id="carouselExampleDark"
+              class="carousel carousel-dark slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img
+                    class="carousel-img"
+                    src="https://i5.walmartimages.com/asr/8942fbf4-a00c-4481-8d93-d2229ffca313.e013aec9b7722246515418810a1e0f24.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                    style="width: fit"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img
+                    class="carousel-img"
+                    src="https://i5.walmartimages.com/asr/a97b78a2-4b10-4a2d-a27a-280a9d1fd7dc.05500d7884f31f6a7c39d7a2c6b28354.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img
+                    class="carousel-img"
+                    src="https://i5.walmartimages.com/asr/5db1536b-4400-4b81-94c5-903c23606308.576a54b90d7422a51e2c8221165ead38.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="carousel-img"
+                    src="https://i5.walmartimages.com/asr/e1a6237e-875d-49f6-ae68-480c1bda29aa.75edcfedc47071461078b24213c76151.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="product-info col-md-5">
+            <div class="info-container">
+              <div class="info-title">
+                Apple Watch Series 3 GPS Silver - 38mm - White Sport Band
+              </div>
+              <div class="info-review" >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+               <span> (4.6)  <u>8082 reviews</span>
+                <i class="fa-solid fa-heart-circle-plus fa-2xl " style="text-align: right; position:absolute; right:40px; @media (max-with:712) {
+                  text-align: right; position:absolute; right:40px; bottom:40px;}" ></i>
+              </div>
+              <div class="info-price">
+                <span class="info-price-discounted" style="color:#303234">139.75€</span>
+                <del class="info-price-original">198.95€</del>
+              </div>
+                <hr>
+              <div class="info-option">
+                <p class="info-option-title">Color:</p>
+                <div class="swatch-container">
+                  <div class="swatch-element-container ">
+                    <div class="hovicon effect-1 negro sub-a " style="background:black;" ></div>
+                   </div>
+
+                   <div class="swatch-element-container">
+                        <div class="hovicon effect-1 blanco sub-a" style="background:antiquewhite;"></div>
+                  
+                
+                    </div>
+                    <div class="swatch-element-container">
+                      <div class="hovicon effect-1 marron sub-a" style="background:saddlebrown;"></div>
+
+                  </div>
+                   <div class="swatch-element-container">
+                    <div class="hovicon effect-1 azul sub-a" style="background:midnightblue;"></div>
+                    </div>
+                    <div class="swatch-element-container">
+                      <div class="hovicon effect-1 rojo sub-a" style="background:crimson;"></div>
+                    </div>  
+                </div>
+              </div>
+                <div class="addcart-button-wrapper   " style="text-align:center;">
+                 
+                   <div class="addcart-button-container">
+             
+                   <a href="#" class="addcart-button text-align:center" style="color:aliceblue; text-align:center;">Add to Cart</a>
+                   </div>
+                   <div class="addcart-button-container">
+                   <a href="C:\Users\HOPPY\Desktop\FinalWebDev\StoreWebDevCheckout\index.html" class="addcart-button" style="color:aliceblue; ">Buy now</a>
+                   </div>
+                </div>
+              </div>
+             
+                </div>
+              </div> 
+             
+              <div class="info-meta">
+                 <span class="info-meta-title">About this item</span>
+                 <hr>
+                <div class="info-meta-text">
+                  <p>Good things come in 3. See how much you move, exercise, and stand daily, and track every way you work out. Listen to your favorite music. Text, call, and email. Pay for lunch, and get a tap when it’s time to turn while getting directions. Series 3 lets you do it all, right from your wrist.Keep motivated by tracking your daily activity on Apple Watch and seeing trends on iPhoneMeasure workouts like running, walking, cycling, yoga, swimming, and dance, plus new tai chi and pilatesHigh and low heart rate notifications and irregular heart rhythm notification1Emergency SOS lets you call for help from your watch2Take calls and reply to texts, right from your wristView notifications at a glance on the Retina displaySync music, podcasts, and audiobooks to your watch and enjoy them on the goSwimproof design3watchOS 8 features new workout types and enhancements to MessagesApple Watch Series 3 requires an iPhone 6s or later with iOS 15 or later.1Irregular rhythm notification requires the latest versions of watchOS and iOS. It is not intended for use by people under 22 years old or those who have been previously diagnosed with atrial fibrillation (Afib).2To use Emergency SOS, your iPhone needs to be nearby. If your iPhone isn’t nearby, your Apple Watch needs to be connected to a known Wi-Fi network and you must set up Wi-Fi Calling.3ISO standard 22810:2010. Appropriate for shallow-water activities like swimming. Submersion below shallow depth and high-velocity water activities not recommended.
+                  </p>
+                  <p> Apple Watch Series 3 GPS 38mm Sport Band Aluminum Case:</p>
+                  <ul>  
+                    <li>GPS and a barometric altimeter track how far and high you go</li>  
+                    <li>Dual-core processor for faster app performance (2)</li>  
+                    <li>Ultimate sports watch and intelligent activity tracker</li>  
+                    <li>Swimproof so you're always ready for the pool or ocean (3)</li>  
+                    <li>Aluminum case</li>  
+                    <li>watchOS 4 is even more intuitive and intelligent</li> 
+                    <li>Apple Watch 38mm is Wi-Fi and Bluetooth 4.2 capable</li>  
+                    <li>Condition: New</li>  
+                    <li>Comes in Space Gray/Black</li> 
+                    <li>Apple Music requires a subscription.</li>  
+                    <li>Compared with the previous generation.</li> 
+                    <li>ISO standard 22810:2010. Appropriate for shallow-water activities like swimming.</li>  
+                    <li>Submersion below shallow depth and high-velocity water activities not recommended.</li> 
+                  </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Guarantee -->
+    <div class="pre-footer wrapped">
+      <hr />
+      <div class="pre-footer-item col-md-3 col-sm-6 col-xs-6">
+        <a href="#">
+          <img src="img/dollar.png" alt="" />
+          <p>
+            <span>Good quality-price</span>
+            <br />
+            All the items are a garbain
+          </p>
+        </a>
+      </div>
+
+      <div class="pre-footer-item col-md-3 col-sm-6 col-xs-6">
+        <a href="#">
+          <img src="img/shipped.png" alt="" />
+          <p>
+            <span>Shop anywhere</span>
+            <br />
+            Ship anywhere around world
+          </p>
+        </a>
+      </div>
+
+      <div class="pre-footer-item col-md-3 col-sm-6 col-xs-6">
+        <a href="#">
+          <img src="img/credit-card.png" alt="" />
+          <p>
+            <span>Secure payment</span>
+            <br />
+            Pay with the safest methods
+          </p>
+        </a>
+      </div>
+
+      <div class="pre-footer-item col-md-3 col-sm-6 col-xs-6">
+        <a href="#">
+          <img src="img/customer-service.png" alt="" />
+          <p>
+            <span>Costumer service</span>
+            <br />
+            24/7 assistance
+          </p>
+        </a>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <footer class="ajsfooter">
+      <!--Credit Card-->
+      <div id="ajsbottom-footer" class="ajssection">
+        <div class="ajscontainer">
+          <div class="ajsbottomrow">
+            <div class="col-md-12 text-center">
+              <ul class="ajsfooter-payments">
+                <li>
+                  <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-credit-card"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-cc-paypal"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-cc-mastercard"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-cc-discover"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-cc-amex"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Credot Card-->
+
+      <!-- Grid container -->
+      <div class="ajsfooter-container">
+        <!-- Section: Social media -->
+        <section class="footer-social-media">
+          <!-- Facebook -->
+          <a class="ajsfooter-btn btn" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <!-- Twitter -->
+          <a class="ajsfooter-btn btn" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <!-- Google -->
+          <a class="ajsfooter-btn btn" href="#!" role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a class="ajsfooter-btn btn" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a class="ajsfooter-btn btn" href="#!" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+          <!-- Github -->
+          <a class="ajsfooter-btn btn" href="#!" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="ajsfooter-form">
+          <form action="">
+            <!--Grid row-->
+            <div class="ajsfooter-text row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                  <input
+                    type="email"
+                    id="form5Example21"
+                    class="form-control"
+                    placeholder="Enter your E-mail"
+                  />
+                  <label class="form-label" for="form5Example21"
+                    >Email address</label
+                  >
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="footerbtn mb-4">Subscribe</button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            This is a e-commerce template which is not looking very good but
+            we're working on it.
+          </p>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">About us</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white">
+                    <i class="fa-solid fa-location-dot"></i>
+                    &nbsp; &nbsp;My house</a
+                  >
+                </li>
+                <li>
+                  <a href="#!" class="text-white">
+                    <i class="fa-solid fa-phone"></i>
+                    &nbsp; &nbsp;+194-40-49-58</a
+                  >
+                </li>
+                <li>
+                  <a href="#!" class="text-white">
+                    <i class="fa-solid fa-envelope"></i>
+                    &nbsp; &nbsp;email@email.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Categories</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white">Ironmongery</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Baby products</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">School supples</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Clothing</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Information</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white">About us</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Privat Policy</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Orders and Reurn</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+
+           
+              
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5
+                class="text-uppercase"
+                style="position: relative; right: 30px"
+              >
+                Services
+              </h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white">My Account</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">View Cart</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Wishlist</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Help</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div
+        class="ajsbottombot text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2022 Copyright
+        <a class="text-white" href="https://mdbootstrap.com/"></a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js+slick.min.js.pagespeed.jc.3oMYTFFUTv.js"></script>
+    <script src="js/menuscript.js"></script>
+    <script src="js/slide.js"></script>
+    <script>
+      eval(mod_pagespeed_nePFsnc3nV);
+    </script>
+    <script>
+      eval(mod_pagespeed_wHSoBauwut);
+    </script>
+
+    <script>
+      eval(mod_pagespeed_WlmYdmNQnI);
+    </script>
+    <script>
+      eval(mod_pagespeed_HxeDIjvTXK);
+    </script>
+    <script>
+      eval(mod_pagespeed_m624O2n4N4);
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
+    ></script>
+  </body>
+</html>
